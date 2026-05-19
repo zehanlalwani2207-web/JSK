@@ -4,619 +4,645 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>JSK Financial Services - Growth Roadmap</title>
-    <!-- Tailwind CSS for modern responsive styling -->
+    <!-- Tailwind CSS for modern utility-first layout styling -->
     <script src="https://cdn.tailwindcss.com"></script>
-    <!-- FontAwesome for professional modern icons -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <!-- Google Fonts: Inter for elegant readability -->
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <!-- Google Fonts: Inter for clean corporate body, Plus Jakarta Sans for elegant headings -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <!-- Lucide Icons for high-quality clean stroke icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
     <style>
         body {
             font-family: 'Inter', sans-serif;
-            background-color: #0b0f19;
-            color: #f1f5f9;
         }
-        /* Custom scrollbar for premium feel */
-        ::-webkit-scrollbar {
-            width: 8px;
+        h1, h2, h3, h4, .font-display {
+            font-family: 'Plus Jakarta Sans', sans-serif;
         }
-        ::-webkit-scrollbar-track {
-            background: #0f172a;
+        /* Custom smooth transition styling */
+        .transition-all-300 {
+            transition: all 300ms cubic-bezier(0.4, 0, 0.2, 1);
         }
-        ::-webkit-scrollbar-thumb {
-            background: #1e293b;
-            border-radius: 4px;
-        }
-        ::-webkit-scrollbar-thumb:hover {
-            background: #334155;
-        }
-        /* Glowing effects */
-        .gold-glow {
-            box-shadow: 0 0 20px rgba(217, 119, 6, 0.15);
-        }
-        .blue-glow {
-            box-shadow: 0 0 20px rgba(59, 130, 246, 0.15);
+        /* Elegant light background mesh */
+        .bg-mesh {
+            background-color: #f8fafc;
+            background-image: 
+                radial-gradient(at 0% 0%, rgba(224, 242, 254, 0.49) 0px, transparent 50%), 
+                radial-gradient(at 100% 0%, rgba(243, 244, 246, 0.6) 0px, transparent 50%),
+                radial-gradient(at 50% 100%, rgba(236, 253, 245, 0.4) 0px, transparent 50%);
         }
     </style>
 </head>
-<body class="min-h-screen flex flex-col justify-between overflow-x-hidden">
+<body class="bg-mesh min-h-screen text-slate-800 flex flex-col justify-between selection:bg-sky-100">
 
-    <!-- Header Navigation -->
-    <header class="border-b border-slate-800 bg-slate-900/60 backdrop-blur-md sticky top-0 z-50">
+    <!-- Top Sleek Header -->
+    <header class="border-b border-slate-200/80 bg-white/70 backdrop-blur-md sticky top-0 z-50">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
-            <div class="flex items-center gap-3">
-                <div class="w-10 h-10 rounded-lg bg-amber-500 flex items-center justify-center gold-glow">
-                    <i class="fa-solid fa-chart-line text-slate-950 text-xl"></i>
+            <div class="flex items-center space-x-3">
+                <div class="w-10 h-10 rounded-xl bg-gradient-to-tr from-sky-600 to-indigo-600 flex items-center justify-center text-white font-bold text-lg shadow-md shadow-sky-100">
+                    J
                 </div>
                 <div>
-                    <h1 class="text-lg font-bold tracking-tight text-white flex items-center gap-2">
-                        JSK Financial Services
-                    </h1>
-                    <p class="text-xs text-amber-500 font-semibold tracking-wider uppercase">AMFI Registered MFD</p>
+                    <span class="text-xs uppercase tracking-widest font-bold text-sky-600">Growth Strategy</span>
+                    <h1 class="text-lg font-extrabold text-slate-900 leading-none">JSK Financial Services</h1>
                 </div>
             </div>
-            <div class="hidden md:flex items-center gap-6">
-                <span class="text-xs bg-slate-800 text-slate-300 px-3 py-1.5 rounded-full border border-slate-700">
-                    <i class="fa-solid fa-location-dot text-amber-500 mr-1"></i> Jaipur, India
+            
+            <div class="hidden md:flex items-center space-x-6 text-sm">
+                <span class="flex items-center text-slate-500">
+                    <i data-lucide="map-pin" class="w-4 h-4 mr-1 text-sky-600"></i> Jaipur, RJ
                 </span>
-                <a href="https://jskfinserve.com" target="_blank" class="text-sm font-medium text-slate-300 hover:text-amber-400 transition-all flex items-center gap-1">
-                    <i class="fa-solid fa-globe"></i> jskfinserve.com
+                <span class="w-1.5 h-1.5 rounded-full bg-slate-300"></span>
+                <span class="flex items-center text-slate-500">
+                    <i data-lucide="award" class="w-4 h-4 mr-1 text-emerald-600"></i> AMFI Registered MFD
+                </span>
+                <span class="w-1.5 h-1.5 rounded-full bg-slate-300"></span>
+                <a href="https://jskfinserve.com" target="_blank" class="text-sky-600 hover:text-sky-700 font-medium flex items-center transition-colors">
+                    <i data-lucide="globe" class="w-4 h-4 mr-1"></i> jskfinserve.com
                 </a>
             </div>
         </div>
     </header>
 
-    <!-- Main Content Area -->
-    <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 flex-grow w-full">
-        <!-- Brand Strategy Overview Hero Card -->
-        <div class="bg-gradient-to-r from-slate-900 via-slate-900/90 to-amber-950/20 border border-slate-800 rounded-2xl p-6 sm:p-8 mb-8 relative overflow-hidden">
-            <div class="absolute top-0 right-0 w-96 h-96 bg-amber-500/5 rounded-full blur-3xl pointer-events-none"></div>
-            <div class="max-w-3xl">
-                <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-semibold bg-amber-500/10 text-amber-400 border border-amber-500/20 mb-4">
-                    <span class="w-1.5 h-1.5 rounded-full bg-amber-500 animate-pulse"></span> Brand Assessment
-                </span>
-                <h2 class="text-2xl sm:text-3.5xl font-extrabold text-white mb-4 leading-tight">
-                    Clarity Builds Confidence: <br class="hidden sm:inline">The Social Presence Roadmap
-                </h2>
-                <p class="text-slate-300 leading-relaxed text-base sm:text-lg">
-                    JSK has built a powerhouse <span class="text-amber-400 font-semibold">trust-first brand</span> with <span class="text-white font-semibold">15+ years of experience</span>, offering everything from wealth-generating SIPs to premium AIF schemes. What is currently missing is a structured, ultra-premium social media presence that channels this high-quality reputation into a continuous stream of new inbound inquiries. <strong>This roadmap details exactly how we build that pipeline.</strong>
-                </p>
-            </div>
-        </div>
-
-        <!-- Two Column Layout: Left Details / Right Canvas Roadmap -->
-        <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+    <!-- Main Interactive Workspace -->
+    <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 flex-grow w-full grid grid-cols-1 lg:grid-cols-12 gap-8 items-stretch">
+        
+        <!-- Left Side: Interactive Insights and Information Hub (5 Columns) -->
+        <div class="lg:col-span-5 flex flex-col justify-between space-y-6">
             
-            <!-- Left Side: Why Now & Platforms -->
-            <div class="lg:col-span-4 space-y-6">
-                <!-- Why JSK Needs This Now Card -->
-                <div class="bg-slate-900/40 border border-slate-800/80 rounded-2xl p-6 relative">
-                    <h3 class="text-lg font-bold text-white mb-5 flex items-center gap-2">
-                        <i class="fa-solid fa-fire-flame-curved text-amber-500"></i> Why Now?
-                    </h3>
-                    <div class="space-y-4">
-                        <div class="flex gap-3">
-                            <div class="flex-shrink-0 w-8 h-8 rounded-lg bg-blue-500/10 border border-blue-500/20 flex items-center justify-center text-blue-400">
-                                <i class="fa-solid fa-chart-line text-xs"></i>
-                            </div>
-                            <div>
-                                <h4 class="text-sm font-semibold text-white">Tier-1 Market Momentum</h4>
-                                <p class="text-xs text-slate-400 mt-1">Financial awareness is spiking rapidly. Securing your presence now blocks competitors from occupying critical digital share of mind.</p>
-                            </div>
-                        </div>
-                        <div class="flex gap-3">
-                            <div class="flex-shrink-0 w-8 h-8 rounded-lg bg-amber-500/10 border border-amber-500/20 flex items-center justify-center text-amber-400">
-                                <i class="fa-solid fa-star text-xs"></i>
-                            </div>
-                            <div>
-                                <h4 class="text-sm font-semibold text-white">300+ Verified Reviews</h4>
-                                <p class="text-xs text-slate-400 mt-1">You already hold massive offline social proof. Converting these genuine client success stories into videos and posts creates undeniable validation.</p>
-                            </div>
-                        </div>
-                        <div class="flex gap-3">
-                            <div class="flex-shrink-0 w-8 h-8 rounded-lg bg-purple-500/10 border border-purple-500/20 flex items-center justify-center text-purple-400">
-                                <i class="fa-solid fa-crown text-xs"></i>
-                            </div>
-                            <div>
-                                <h4 class="text-sm font-semibold text-white">Premium Client Attraction</h4>
-                                <p class="text-xs text-slate-400 mt-1">High-ticket products like AIF, PMS, and GIFT City funds require extremely polished visual assets to capture discerning investors.</p>
-                            </div>
-                        </div>
-                    </div>
+            <!-- Context Summary Board -->
+            <div class="bg-white rounded-2xl p-6 border border-slate-100 shadow-sm">
+                <div class="flex items-center space-x-2 text-xs font-bold uppercase tracking-wider text-indigo-600 mb-2">
+                    <i data-lucide="sparkles" class="w-4 h-4"></i>
+                    <span>Brand Diagnosis</span>
                 </div>
-
-                <!-- Platforms to Prioritise Card -->
-                <div class="bg-slate-900/40 border border-slate-800/80 rounded-2xl p-6">
-                    <h3 class="text-lg font-bold text-white mb-5 flex items-center gap-2">
-                        <i class="fa-solid fa-layer-group text-amber-500"></i> Channel Strategy
-                    </h3>
-                    <div class="grid grid-cols-2 gap-3">
-                        <div class="bg-slate-950/60 p-3 rounded-xl border border-slate-800 hover:border-amber-500/30 transition-all">
-                            <div class="flex items-center gap-2 text-pink-500 mb-1">
-                                <i class="fa-brands fa-instagram text-lg"></i>
-                                <span class="text-xs font-semibold uppercase text-slate-300">Instagram</span>
-                            </div>
-                            <span class="text-xs text-slate-400">Reels & Carousels for dynamic discovery.</span>
-                        </div>
-                        <div class="bg-slate-950/60 p-3 rounded-xl border border-slate-800 hover:border-amber-500/30 transition-all">
-                            <div class="flex items-center gap-2 text-blue-400 mb-1">
-                                <i class="fa-brands fa-linkedin text-lg"></i>
-                                <span class="text-xs font-semibold uppercase text-slate-300">LinkedIn</span>
-                            </div>
-                            <span class="text-xs text-slate-400">Thought leadership & HNI professional network.</span>
-                        </div>
-                        <div class="bg-slate-950/60 p-3 rounded-xl border border-slate-800 hover:border-amber-500/30 transition-all">
-                            <div class="flex items-center gap-2 text-red-500 mb-1">
-                                <i class="fa-brands fa-youtube text-lg"></i>
-                                <span class="text-xs font-semibold uppercase text-slate-300">YouTube</span>
-                            </div>
-                            <span class="text-xs text-slate-400">Shorts + deep-dive educational explainers.</span>
-                        </div>
-                        <div class="bg-slate-950/60 p-3 rounded-xl border border-slate-800 hover:border-amber-500/30 transition-all">
-                            <div class="flex items-center gap-2 text-emerald-500 mb-1">
-                                <i class="fa-brands fa-whatsapp text-lg"></i>
-                                <span class="text-xs font-semibold uppercase text-slate-300">WhatsApp</span>
-                            </div>
-                            <span class="text-xs text-slate-400">Direct broadcast pipelines & client referrals.</span>
-                        </div>
-                    </div>
+                <h2 class="text-2xl font-extrabold text-slate-900 tracking-tight mb-3">Converting Trust into Action</h2>
+                <p class="text-slate-600 text-sm leading-relaxed">
+                    JSK has built an exceptional, trust-first brand with over <strong class="text-slate-900 font-semibold">15+ years of experience</strong> and a robust full-service portfolio ranging from SIPs to AIFs. 
+                </p>
+                <div class="mt-4 p-3 bg-sky-50/50 rounded-xl border border-sky-100 flex items-start space-x-3">
+                    <i data-lucide="help-circle" class="w-5 h-5 text-sky-600 mt-0.5 flex-shrink-0"></i>
+                    <p class="text-xs text-sky-800 leading-relaxed">
+                        <strong class="font-semibold text-sky-950">The missing piece:</strong> A consistent, premium online presence that captures trust on social channels and converts native awareness directly into quality business enquiries.
+                    </p>
                 </div>
             </div>
 
-            <!-- Right Side: The Interactive Canvas Roadmap -->
-            <div class="lg:col-span-8 space-y-6">
-                <!-- Interactive Canvas Container -->
-                <div class="bg-slate-900 border border-slate-800 rounded-2xl p-4 sm:p-6 shadow-2xl relative">
-                    <div class="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 mb-4">
-                        <div>
-                            <h3 class="text-lg font-bold text-white flex items-center gap-2">
-                                <i class="fa-solid fa-map text-amber-500 animate-pulse"></i> Interactive Delivery Roadmap
-                            </h3>
-                            <p class="text-xs text-slate-400">Click or hover over any phase on the map to inspect key deliverables.</p>
-                        </div>
-                        <!-- Manual Legend -->
-                        <div class="flex items-center gap-3 text-xs text-slate-400">
-                            <span class="flex items-center gap-1"><span class="w-2.5 h-2.5 rounded-full bg-blue-500"></span> Strategy</span>
-                            <span class="flex items-center gap-1"><span class="w-2.5 h-2.5 rounded-full bg-purple-500"></span> Content</span>
-                            <span class="flex items-center gap-1"><span class="w-2.5 h-2.5 rounded-full bg-amber-500"></span> Distribution</span>
+            <!-- Dynamic Phase Information Card (Changes with canvas nodes) -->
+            <div id="info-card" class="bg-white rounded-2xl p-6 border-2 border-sky-500/30 shadow-md shadow-sky-50/50 flex-grow flex flex-col justify-between relative overflow-hidden transition-all duration-300">
+                <!-- Background visual elements inside card -->
+                <div class="absolute -right-8 -top-8 w-32 h-32 bg-sky-50 rounded-full -z-10 opacity-60"></div>
+                
+                <div>
+                    <!-- Section Meta Header -->
+                    <div class="flex items-center justify-between mb-4">
+                        <span id="card-badge" class="px-3 py-1 text-xs font-bold uppercase tracking-wider rounded-full bg-sky-100 text-sky-800">
+                            Phase 1
+                        </span>
+                        <div class="flex items-center space-x-1 text-xs text-slate-400">
+                            <span>Interactive Map Control</span>
+                            <i data-lucide="info" class="w-3.5 h-3.5"></i>
                         </div>
                     </div>
 
-                    <!-- Canvas Frame -->
-                    <div class="relative w-full aspect-[16/9] min-h-[300px] sm:min-h-[400px] bg-slate-950 rounded-xl overflow-hidden border border-slate-800/60">
-                        <canvas id="roadmapCanvas" class="absolute inset-0 w-full h-full cursor-pointer"></canvas>
+                    <!-- Interactive Title & Slogan -->
+                    <h3 id="card-title" class="text-xl font-bold text-slate-900 mb-1">
+                        Loading strategy...
+                    </h3>
+                    <p id="card-tagline" class="text-xs font-medium text-sky-600 italic mb-4">
+                        "Clarity Builds Confidence"
+                    </p>
+
+                    <!-- Content Bullet Points (Populated via JS) -->
+                    <div id="card-content" class="space-y-4 text-sm text-slate-600">
+                        <!-- Dynamic list items insert here -->
                     </div>
                 </div>
 
-                <!-- Live Details Panel based on Canvas selection -->
-                <div id="detailsCard" class="bg-gradient-to-br from-slate-900 to-slate-950 border border-amber-500/20 rounded-2xl p-6 gold-glow transition-all duration-350">
-                    <div class="flex items-start justify-between gap-4">
-                        <div class="flex items-center gap-3.5">
-                            <div id="detailIconContainer" class="w-12 h-12 rounded-xl bg-amber-500/10 border border-amber-500/30 flex items-center justify-center text-amber-400 text-xl">
-                                <i id="detailIcon" class="fa-solid fa-camera-retro"></i>
-                            </div>
-                            <div>
-                                <span id="detailBadge" class="text-xs font-bold text-amber-500 uppercase tracking-widest">Phase 1</span>
-                                <h4 id="detailTitle" class="text-xl font-bold text-white mt-0.5">Professional shoots</h4>
-                            </div>
-                        </div>
-                        <div class="px-2.5 py-1 rounded bg-slate-800 text-[10px] uppercase font-bold tracking-wider text-slate-400 border border-slate-700/60">
-                            Roadmap Focus
-                        </div>
+                <!-- Guidance footer -->
+                <div class="mt-6 pt-4 border-t border-slate-100 flex items-center justify-between text-xs text-slate-400">
+                    <span class="flex items-center">
+                        <i data-lucide="mouse-pointer-click" class="w-3.5 h-3.5 mr-1.5 text-indigo-500"></i> 
+                        Click nodes on the right map to explore
+                    </span>
+                    <button id="next-node-btn" class="text-sky-600 font-semibold hover:text-sky-700 flex items-center space-x-1 transition-colors">
+                        <span>Next Step</span>
+                        <i data-lucide="chevron-right" class="w-3.5 h-3.5"></i>
+                    </button>
+                </div>
+            </div>
+            
+            <!-- Quick Brand Tagline Match -->
+            <div class="bg-gradient-to-r from-slate-900 to-indigo-950 text-white rounded-2xl p-4 flex items-center justify-between shadow-sm">
+                <div class="flex items-center space-x-3">
+                    <div class="p-2 bg-white/10 rounded-lg text-emerald-400">
+                        <i data-lucide="shield-check" class="w-5 h-5"></i>
                     </div>
-                    <p id="detailDesc" class="text-slate-300 text-sm sm:text-base mt-4 leading-relaxed">
-                        Polished photos of the team, office, and client interactions that build credibility and human trust — especially important in wealth management where people invest with people they trust.
-                    </p>
-                    <div class="mt-6 pt-5 border-t border-slate-800/80">
-                        <h5 class="text-xs font-bold text-slate-400 uppercase tracking-wider mb-3">Key Strategic Focus Areas</h5>
-                        <ul id="detailPoints" class="grid grid-cols-1 sm:grid-cols-2 gap-2.5 text-xs sm:text-sm text-slate-300">
-                            <li class="flex items-center gap-2"><i class="fa-solid fa-circle-check text-amber-500"></i> Office visual assets & lifestyle imagery</li>
-                            <li class="flex items-center gap-2"><i class="fa-solid fa-circle-check text-amber-500"></i> Professional headshots for brand trust</li>
-                            <li class="flex items-center gap-2"><i class="fa-solid fa-circle-check text-amber-500"></i> High-end video intros & sound profiles</li>
-                            <li class="flex items-center gap-2"><i class="fa-solid fa-circle-check text-amber-500"></i> Jaipur-centric localization branding</li>
-                        </ul>
+                    <div>
+                        <p class="text-xs text-slate-300 tracking-wide uppercase font-bold">Creative North Star</p>
+                        <p class="text-sm font-semibold text-white">"Clarity Builds Confidence"</p>
                     </div>
+                </div>
+                <div class="text-xs font-bold text-indigo-300 bg-indigo-500/10 border border-indigo-400/20 px-3 py-1 rounded-full">
+                    JSK Identity
                 </div>
             </div>
 
         </div>
+
+        <!-- Right Side: Beautiful Interactive Canvas Road (7 Columns) -->
+        <div class="lg:col-span-7 flex flex-col">
+            <div class="bg-white rounded-2xl border border-slate-100 shadow-sm p-6 flex flex-col justify-between h-full min-h-[500px] lg:min-h-0">
+                
+                <div class="flex items-center justify-between mb-4">
+                    <div>
+                        <h3 class="font-bold text-slate-900 flex items-center space-x-2">
+                            <span>Growth Path Map</span>
+                            <span class="inline-flex items-center px-2 py-0.5 rounded text-xs font-medium bg-emerald-50 text-emerald-700 border border-emerald-100">Live Canvas</span>
+                        </h3>
+                        <p class="text-xs text-slate-500 mt-0.5">Click any stage node to inspect full deliverables and value drivers</p>
+                    </div>
+                    
+                    <button id="reset-canvas-btn" class="text-xs font-medium text-slate-500 hover:text-sky-600 flex items-center space-x-1 border border-slate-200 hover:border-sky-100 px-2.5 py-1.5 rounded-lg transition-colors bg-slate-50 hover:bg-sky-50/50">
+                        <i data-lucide="rotate-ccw" class="w-3.5 h-3.5"></i>
+                        <span>Restart Tour</span>
+                    </button>
+                </div>
+
+                <!-- Canvas Wrapper responsive sizing container -->
+                <div class="relative flex-grow w-full h-[360px] md:h-[420px] bg-slate-50 rounded-xl border border-slate-100 overflow-hidden select-none">
+                    <canvas id="roadmap-canvas" class="absolute inset-0 block w-full h-full cursor-default"></canvas>
+                    
+                    <!-- Dynamic absolute badge overlays for extra clarity -->
+                    <div class="absolute top-3 left-3 bg-white/90 backdrop-blur-sm border border-slate-100 rounded-lg px-2.5 py-1 text-[10px] font-semibold text-slate-500 flex items-center shadow-sm">
+                        <span class="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-pulse mr-1.5"></span>
+                        Interactive 4-Phase Growth Road
+                    </div>
+                    
+                    <div class="absolute bottom-3 right-3 bg-white/90 backdrop-blur-sm border border-slate-100 rounded-lg px-2 py-1 text-[10px] text-slate-400">
+                        Drag or click on coordinates
+                    </div>
+                </div>
+
+                <!-- Footer under-canvas details -->
+                <div class="mt-4 grid grid-cols-4 gap-2 text-center">
+                    <div class="bg-slate-50 rounded-lg py-2 border border-slate-100/50">
+                        <p class="text-[10px] font-bold text-slate-400 uppercase tracking-wider">Phase 1</p>
+                        <p class="text-xs font-bold text-slate-700 mt-0.5">Strategic Why</p>
+                    </div>
+                    <div class="bg-slate-50 rounded-lg py-2 border border-slate-100/50">
+                        <p class="text-[10px] font-bold text-slate-400 uppercase tracking-wider">Phase 2</p>
+                        <p class="text-xs font-bold text-slate-700 mt-0.5">Deliverables</p>
+                    </div>
+                    <div class="bg-slate-50 rounded-lg py-2 border border-slate-100/50">
+                        <p class="text-[10px] font-bold text-slate-400 uppercase tracking-wider">Phase 3</p>
+                        <p class="text-xs font-bold text-slate-700 mt-0.5">Target Channels</p>
+                    </div>
+                    <div class="bg-slate-50 rounded-lg py-2 border border-slate-100/50">
+                        <p class="text-[10px] font-bold text-slate-400 uppercase tracking-wider">Phase 4</p>
+                        <p class="text-xs font-bold text-slate-700 mt-0.5">Enquiry Vision</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
     </main>
 
-    <!-- Footer Area -->
-    <footer class="border-t border-slate-800 bg-slate-950 py-8 mt-12">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row items-center justify-between gap-6">
-            <div class="flex items-center gap-2">
-                <i class="fa-solid fa-shield-halved text-amber-500"></i>
-                <p class="text-xs text-slate-400">
-                    © 2026 JSK Financial Services Social Growth Roadmap. Crafted for absolute precision.
-                </p>
+    <!-- Responsive Quick Bottom Bar -->
+    <footer class="border-t border-slate-200 bg-white/60 py-4 mt-8">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row items-center justify-between text-xs text-slate-500 gap-2">
+            <div>
+                <strong class="text-slate-700">JSK Financial Services Roadmap</strong> — Clarity Builds Confidence.
             </div>
-            <div class="flex gap-4 text-xs text-slate-500">
-                <span>Clarity Builds Confidence</span>
-                <span>•</span>
-                <span>Wealth Management Digital Presence</span>
+            <div>
+                Built for professional advisory elevation &bull; AMFI Registered MFD
             </div>
         </div>
     </footer>
 
     <script>
-        // High-DPI Canvas scaling helper
-        const canvas = document.getElementById('roadmapCanvas');
-        const ctx = canvas.getContext('2d');
-
-        // Roadmap node definitions matching deliverables
-        const nodes = [
+        // Data containing all strategic phases, bullets, themes
+        const roadmapData = [
             {
                 id: 1,
-                xPercent: 15,
-                yPercent: 70,
-                radius: 28,
-                title: "Professional Shoots",
-                badge: "Phase 1: Foundation & Trust",
-                icon: "fa-camera-retro",
-                iconUnicode: "\uf083", // FontAwesome camera icon code
-                color: "#3b82f6", // Blue
-                desc: "Polished photos of the team, office, and client interactions that build credibility and human trust — especially important in wealth management where people invest with people they trust.",
-                points: [
-                    "High-resolution team portraits",
-                    "Authentic office & interaction photography",
-                    "Jaipur brand localization assets",
-                    "Establishing visual prestige early"
-                ]
+                phase: "Phase 1",
+                title: "Why JSK Needs This Now",
+                tagline: "Capturing the Tier-1 Attention Premium",
+                badgeColor: "bg-indigo-100 text-indigo-800 border-indigo-200",
+                bullets: [
+                    {
+                        title: "Rising Market Awareness",
+                        desc: "Financial awareness is rising fast in Tier-1 India. JSK must secure visibility before competitors occupy the digital space.",
+                        icon: "trending-up"
+                    },
+                    {
+                        title: "Amplifying Real Social Proof",
+                        desc: "JSK boasts over 300+ genuine reviews. Converting client stories to video acts as a high-conversion engine.",
+                        icon: "message-square"
+                    },
+                    {
+                        title: "High-End Service Elevation",
+                        desc: "Premium wealth products (AIF, PMS, GIFT City) require high-fidelity content to match target audience expectations.",
+                        icon: "gem"
+                    },
+                    {
+                        title: "Tagline Fulfillment",
+                        desc: "Bring JSK's core tagline 'Clarity Builds Confidence' to life through pristine visual branding.",
+                        icon: "compass"
+                    }
+                ],
+                canvasPos: { xPercent: 0.15, yPercent: 0.5 },
+                nodeColor: "#4f46e5" // Indigo
             },
             {
                 id: 2,
-                xPercent: 38,
-                yPercent: 35,
-                radius: 28,
-                title: "Simplified Reels",
-                badge: "Phase 2: Video Authority",
-                icon: "fa-video",
-                iconUnicode: "\uf03d", // FontAwesome video
-                color: "#a855f7", // Purple
-                desc: "Short-form videos for Instagram and YouTube Shorts that simplify complex financial concepts — SIP, PMS, NRI investing, AIF — making JSK the go-to name for financial clarity in Jaipur.",
-                points: [
-                    "Complex-to-simple finance explainers",
-                    "Focus on premium NRI investing & PMS",
-                    "Highly dynamic, interactive edits",
-                    "Optimized YouTube Shorts & IG Reels"
-                ]
+                phase: "Phase 2",
+                title: "What We Deliver",
+                tagline: "Frictionless Client Relationship Enablement",
+                badgeColor: "bg-sky-100 text-sky-800 border-sky-200",
+                bullets: [
+                    {
+                        title: "Professional On-site Shoots",
+                        desc: "High-quality photographs of the JSK team, office hub, and live client sessions to establish human trust.",
+                        icon: "camera"
+                    },
+                    {
+                        title: "Educational Reels",
+                        desc: "Simple, visual explainers covering complex products like SIP, PMS, NRI investing, and AIF platforms.",
+                        icon: "play-circle"
+                    },
+                    {
+                        title: "On-Brand Static Graphics",
+                        desc: "Infographics & carousels for Instagram/LinkedIn carrying market updates and key financial concepts.",
+                        icon: "image"
+                    },
+                    {
+                        title: "Complete SMM Management",
+                        desc: "Full post scheduling, copywriting, and network growth on IG, LinkedIn, YouTube, and X.",
+                        icon: "users"
+                    }
+                ],
+                canvasPos: { xPercent: 0.38, yPercent: 0.35 },
+                nodeColor: "#0284c7" // Sky Blue
             },
             {
                 id: 3,
-                xPercent: 62,
-                yPercent: 65,
-                radius: 28,
-                title: "Static & Educational Posts",
-                badge: "Phase 3: Omnipresent Value",
-                icon: "fa-chart-pie",
-                iconUnicode: "\uf200", // FontAwesome pie chart
-                color: "#f59e0b", // Amber
-                desc: "On-brand carousels and infographics for Instagram and LinkedIn — covering services, market updates, client testimonials, and financial tips that keep JSK top of mind.",
-                points: [
-                    "Value-driven educational carousels",
-                    "Testimonial highlights (300+ reviews)",
-                    "Real-time financial market insights",
-                    "Tailored LinkedIn professional layouts"
-                ]
+                phase: "Phase 3",
+                title: "Prioritised Platforms",
+                tagline: "Targeting Where Wealth Decisions Happen",
+                badgeColor: "bg-emerald-100 text-emerald-800 border-emerald-200",
+                bullets: [
+                    {
+                        title: "Instagram (Reels + Carousels)",
+                        desc: "Perfect for initial reach, visual visualizer hooks, local Jaipur targeting, and direct direct messaging client lead nurture.",
+                        icon: "instagram"
+                    },
+                    {
+                        title: "LinkedIn (Professional Reach)",
+                        desc: "Direct hub for high-net-worth individuals, business founders, corporate executives, and trusted professional connections.",
+                        icon: "linkedin"
+                    },
+                    {
+                        title: "YouTube (Shorts + Explainers)",
+                        desc: "SEO-friendly visual home for deep-dive clarify topics. Search discoverability for high-volume query keywords.",
+                        icon: "youtube"
+                    },
+                    {
+                        title: "WhatsApp (Broadcasts + Referrals)",
+                        desc: "Direct channel connection with current clients, sending sleek broadcasts, and promoting rapid referral shares.",
+                        icon: "phone"
+                    }
+                ],
+                canvasPos: { xPercent: 0.62, yPercent: 0.65 },
+                nodeColor: "#10b981" // Emerald
             },
             {
                 id: 4,
-                xPercent: 85,
-                yPercent: 30,
-                radius: 28,
-                title: "Social Media Management",
-                badge: "Phase 4: Scaling & Enquiries",
-                icon: "fa-paper-plane",
-                iconUnicode: "\uf1d8", // FontAwesome paper plane
-                color: "#10b981", // Emerald
-                desc: "End-to-end handling of Instagram, LinkedIn, YouTube, and X — scheduling, posting, analytics, and growing JSK's online presence so the team can focus purely on closing client relationships.",
-                points: [
-                    "Daily optimized cross-platform posting",
-                    "Interactive story & community engagement",
-                    "Conversion-led inbound DM management",
-                    "Growth insights & lead pipeline analysis"
-                ]
+                phase: "Phase 4",
+                title: "The Ultimate Destination",
+                tagline: "Translating Brand Clarity into Inquiries",
+                badgeColor: "bg-slate-900 text-slate-100 border-slate-800",
+                bullets: [
+                    {
+                        title: "High-Trust Authority",
+                        desc: "JSK becomes the default first choice for financial clarity and client relationship care in Jaipur.",
+                        icon: "shield"
+                    },
+                    {
+                        title: "Continuous Inbound Interest",
+                        desc: "Social channels act as an automated marketing funnel generating incoming messages directly for team follow-ups.",
+                        icon: "phone-call"
+                    },
+                    {
+                        title: "Sustained Client Growth",
+                        desc: "Existing and new clients feel safe investing long term because they see real brand actions transparently.",
+                        icon: "award"
+                    }
+                ],
+                canvasPos: { xPercent: 0.85, yPercent: 0.5 },
+                nodeColor: "#0f172a" // Slate
             }
         ];
 
-        let activeNodeId = 1;
-        let hoverNodeId = null;
-        let particles = [];
-        let time = 0;
+        let selectedNodeId = 1;
 
-        // Initialize particles following the path
-        function initParticles() {
-            particles = [];
-            for (let i = 0; i < 30; i++) {
-                particles.push({
-                    progress: Math.random(),
-                    speed: 0.0015 + Math.random() * 0.001,
-                    size: 1.5 + Math.random() * 2
-                });
-            }
-        }
+        document.addEventListener("DOMContentLoaded", () => {
+            // Initiate Lucide Icons setup
+            lucide.createIcons();
+            
+            // Set up interface element references
+            const cardBadge = document.getElementById("card-badge");
+            const cardTitle = document.getElementById("card-title");
+            const cardTagline = document.getElementById("card-tagline");
+            const cardContent = document.getElementById("card-content");
+            const nextBtn = document.getElementById("next-node-btn");
+            const resetBtn = document.getElementById("reset-canvas-btn");
+            const infoCard = document.getElementById("info-card");
 
-        // Resize Handler
-        function resizeCanvas() {
-            const rect = canvas.getBoundingClientRect();
-            canvas.width = rect.width * window.devicePixelRatio;
-            canvas.height = rect.height * window.devicePixelRatio;
-            ctx.scale(window.devicePixelRatio, window.devicePixelRatio);
-        }
+            // Update content details dynamically inside card panel
+            function updateDetailsPanel(id) {
+                const nodeData = roadmapData.find(item => item.id === id);
+                if (!nodeData) return;
 
-        // Find cubic bezier point coordinates (S-shape curve)
-        function getPathPoint(t, nPoints) {
-            // Evaluates path dynamically along the nodes sequential link
-            if (t <= 0) return { x: nPoints[0].x, y: nPoints[0].y };
-            if (t >= 1) return { x: nPoints[nPoints.length - 1].x, y: nPoints[nPoints.length - 1].y };
+                // Simple state active animation trigger
+                infoCard.classList.add("opacity-60");
+                infoCard.classList.add("translate-y-1");
 
-            const sectionCount = nPoints.length - 1;
-            const scaledT = t * sectionCount;
-            const index = Math.floor(scaledT);
-            const localT = scaledT - index;
+                setTimeout(() => {
+                    cardBadge.textContent = nodeData.phase;
+                    cardBadge.className = `px-3 py-1 text-xs font-bold uppercase tracking-wider rounded-full border ${nodeData.badgeColor}`;
+                    cardTitle.textContent = nodeData.title;
+                    cardTagline.textContent = `"${nodeData.tagline}"`;
 
-            const p0 = nPoints[index];
-            const p1 = nPoints[index + 1];
+                    // Generate clean modern bullet lists
+                    cardContent.innerHTML = "";
+                    nodeData.bullets.forEach(b => {
+                        const itemDiv = document.createElement("div");
+                        itemDiv.className = "flex items-start space-x-3 bg-slate-50/50 p-3 rounded-xl border border-slate-100 hover:border-sky-100 hover:bg-white transition-all duration-200 group";
+                        
+                        itemDiv.innerHTML = `
+                            <div class="p-2 bg-white rounded-lg text-sky-600 shadow-sm border border-slate-100 group-hover:bg-sky-50 group-hover:text-sky-700 transition-colors flex-shrink-0">
+                                <i data-lucide="${b.icon}" class="w-4 h-4"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-slate-800 text-sm group-hover:text-sky-900 transition-colors">${b.title}</h4>
+                                <p class="text-xs text-slate-500 mt-1 leading-relaxed">${b.desc}</p>
+                            </div>
+                        `;
+                        cardContent.appendChild(itemDiv);
+                    });
 
-            // S-curve interpolation (bezier)
-            const cx1 = p0.x + (p1.x - p0.x) * 0.5;
-            const cy1 = p0.y;
-            const cx2 = p0.x + (p1.x - p0.x) * 0.5;
-            const cy2 = p1.y;
-
-            // Cubic bezier evaluation
-            const mt = 1 - localT;
-            const x = mt * mt * mt * p0.x + 3 * mt * mt * localT * cx1 + 3 * mt * localT * localT * cx2 + localT * localT * localT * p1.x;
-            const y = mt * mt * mt * p0.y + 3 * mt * mt * localT * cy1 + 3 * mt * localT * localT * cy2 + localT * localT * localT * p1.y;
-
-            return { x, y };
-        }
-
-        function drawRoadmap() {
-            const width = canvas.clientWidth;
-            const height = canvas.clientHeight;
-
-            // Clear Canvas
-            ctx.clearRect(0, 0, width, height);
-
-            // Establish actual coordinate mappings on nodes
-            const mappedNodes = nodes.map(n => ({
-                ...n,
-                x: (n.xPercent / 100) * width,
-                y: (n.yPercent / 100) * height
-            }));
-
-            // Draw Background Grid
-            ctx.strokeStyle = "rgba(30, 41, 59, 0.3)";
-            ctx.lineWidth = 1;
-            const gridSize = 40;
-            for (let x = 0; x < width; x += gridSize) {
-                ctx.beginPath();
-                ctx.moveTo(x, 0);
-                ctx.lineTo(x, height);
-                ctx.stroke();
-            }
-            for (let y = 0; y < height; y += gridSize) {
-                ctx.beginPath();
-                ctx.moveTo(0, y);
-                ctx.lineTo(width, y);
-                ctx.stroke();
+                    // Re-draw icons
+                    lucide.createIcons();
+                    
+                    infoCard.classList.remove("opacity-60");
+                    infoCard.classList.remove("translate-y-1");
+                }, 150);
             }
 
-            // Draw Main Connecting Roadmap Path
-            ctx.strokeStyle = "rgba(30, 41, 59, 0.8)";
-            ctx.lineWidth = 6;
-            ctx.lineCap = "round";
-            ctx.beginPath();
-
-            const steps = 150;
-            for (let i = 0; i <= steps; i++) {
-                const pt = getPathPoint(i / steps, mappedNodes);
-                if (i === 0) ctx.moveTo(pt.x, pt.y);
-                else ctx.lineTo(pt.x, pt.y);
-            }
-            ctx.stroke();
-
-            // Draw animated flowing confidence particles along path
-            particles.forEach(p => {
-                p.progress += p.speed;
-                if (p.progress > 1) p.progress = 0;
-                const pos = getPathPoint(p.progress, mappedNodes);
-
-                // Gradient flow color shifting
-                ctx.fillStyle = `rgba(245, 158, 11, ${0.4 + Math.sin(time * 0.05 + p.progress * 10) * 0.3})`;
-                ctx.beginPath();
-                ctx.arc(pos.x, pos.y, p.size * 1.8, 0, Math.PI * 2);
-                ctx.fill();
+            // Next button control step logic
+            nextBtn.addEventListener("click", () => {
+                selectedNodeId = selectedNodeId === roadmapData.length ? 1 : selectedNodeId + 1;
+                updateDetailsPanel(selectedNodeId);
             });
 
-            // Draw Nodes
-            mappedNodes.forEach(node => {
-                const isHovered = hoverNodeId === node.id;
-                const isActive = activeNodeId === node.id;
-                const baseRadius = node.radius;
-                const currentRadius = isHovered ? baseRadius + 4 : baseRadius;
-
-                // Node Outer Glow
-                const outerGlow = ctx.createRadialGradient(node.x, node.y, currentRadius - 5, node.x, node.y, currentRadius + 15);
-                if (isActive) {
-                    outerGlow.addColorStop(0, "rgba(245, 158, 11, 0.3)");
-                    outerGlow.addColorStop(1, "rgba(245, 158, 11, 0)");
-                } else if (isHovered) {
-                    outerGlow.addColorStop(0, `${node.color}55`);
-                    outerGlow.addColorStop(1, `${node.color}00`);
-                } else {
-                    outerGlow.addColorStop(0, `${node.color}22`);
-                    outerGlow.addColorStop(1, `${node.color}00`);
-                }
-                ctx.fillStyle = outerGlow;
-                ctx.beginPath();
-                ctx.arc(node.x, node.y, currentRadius + 15, 0, Math.PI * 2);
-                ctx.fill();
-
-                // Node Body Border & Fill
-                ctx.strokeStyle = isActive ? "#f59e0b" : node.color;
-                ctx.lineWidth = isActive ? 4 : 2;
-                ctx.fillStyle = "#0f172a";
-                ctx.beginPath();
-                ctx.arc(node.x, node.y, currentRadius, 0, Math.PI * 2);
-                ctx.fill();
-                ctx.stroke();
-
-                // Inside Center highlight
-                ctx.fillStyle = isActive ? "rgba(245, 158, 11, 0.1)" : `${node.color}11`;
-                ctx.beginPath();
-                ctx.arc(node.x, node.y, currentRadius - 4, 0, Math.PI * 2);
-                ctx.fill();
-
-                // Draw Icons in Canvas Nodes using FontAwesome Font Integration
-                ctx.fillStyle = isActive ? "#f59e0b" : "#94a3b8";
-                ctx.font = `600 ${isHovered ? '20px' : '16px'} "Font Awesome 6 Free"`;
-                ctx.textAlign = "center";
-                ctx.textBaseline = "middle";
-                ctx.fillText(node.iconUnicode, node.x, node.y);
-
-                // Display Node Text Labels below/above depending on phase position
-                ctx.fillStyle = isActive ? "#ffffff" : "#cbd5e1";
-                ctx.font = `bold ${isActive ? '13px' : '11px'} Inter`;
-                ctx.textAlign = "center";
-                
-                const textYOffset = node.yPercent > 50 ? - (currentRadius + 15) : (currentRadius + 22);
-                ctx.fillText(node.title, node.x, node.y + textYOffset);
-
-                // Short Badge description sub-title for active element
-                if (isActive) {
-                    ctx.fillStyle = "#f59e0b";
-                    ctx.font = "800 9px Inter";
-                    ctx.fillText("ACTIVE PHASE", node.x, node.y + textYOffset + (node.yPercent > 50 ? -14 : 14));
-                }
+            // Reset Tour mechanism
+            resetBtn.addEventListener("click", () => {
+                selectedNodeId = 1;
+                updateDetailsPanel(selectedNodeId);
             });
 
-            time++;
-            requestAnimationFrame(drawRoadmap);
-        }
+            // Run initial population call
+            updateDetailsPanel(selectedNodeId);
 
-        // Event Listeners for Interaction & Interoperability
-        function getMousePos(evt) {
-            const rect = canvas.getBoundingClientRect();
-            return {
-                x: evt.clientX - rect.left,
-                y: evt.clientY - rect.top
-            };
-        }
+            const canvas = document.getElementById("roadmap-canvas");
+            const ctx = canvas.getContext("2d");
+            let animationFrameId;
 
-        function checkNodeCollision(pos) {
-            const width = canvas.clientWidth;
-            const height = canvas.clientHeight;
-
-            for (let i = 0; i < nodes.length; i++) {
-                const node = nodes[i];
-                const nx = (node.xPercent / 100) * width;
-                const ny = (node.yPercent / 100) * height;
-
-                const distance = Math.sqrt((pos.x - nx) ** 2 + (pos.y - ny) ** 2);
-                if (distance <= node.radius + 10) {
-                    return node;
-                }
-            }
-            return null;
-        }
-
-        // Handle Interactive Update on Selection
-        function updateDetailsPanel(node) {
-            const card = document.getElementById('detailsCard');
-            const badge = document.getElementById('detailBadge');
-            const title = document.getElementById('detailTitle');
-            const desc = document.getElementById('detailDesc');
-            const icon = document.getElementById('detailIcon');
-            const list = document.getElementById('detailPoints');
-            const iconContainer = document.getElementById('detailIconContainer');
-
-            // Apply slight transition effect on change
-            card.classList.add('opacity-0', 'scale-[0.98]');
-
-            setTimeout(() => {
-                badge.innerText = node.badge;
-                title.innerText = node.title;
-                desc.innerText = node.desc;
+            // Handle device-pixel-ratio scaling for ultra crisp display elements
+            function resizeCanvas() {
+                const rect = canvas.getBoundingClientRect();
+                const dpr = window.devicePixelRatio || 1;
                 
-                // Swap icon classes safely
-                icon.className = `fa-solid ${node.icon}`;
-
-                // Swap colors of border/texts dynamically
-                if (node.id === 4) { // Emerald Theme
-                    badge.className = "text-xs font-bold text-emerald-500 uppercase tracking-widest";
-                    iconContainer.className = "w-12 h-12 rounded-xl bg-emerald-500/10 border border-emerald-500/30 flex items-center justify-center text-emerald-400 text-xl";
-                    card.className = "bg-gradient-to-br from-slate-900 to-slate-950 border border-emerald-500/20 rounded-2xl p-6 shadow-2xl transition-all duration-300";
-                } else if (node.id === 1) { // Blue Theme
-                    badge.className = "text-xs font-bold text-blue-500 uppercase tracking-widest";
-                    iconContainer.className = "w-12 h-12 rounded-xl bg-blue-500/10 border border-blue-500/30 flex items-center justify-center text-blue-400 text-xl";
-                    card.className = "bg-gradient-to-br from-slate-900 to-slate-950 border border-blue-500/20 rounded-2xl p-6 shadow-2xl transition-all duration-300";
-                } else if (node.id === 2) { // Purple Theme
-                    badge.className = "text-xs font-bold text-purple-500 uppercase tracking-widest";
-                    iconContainer.className = "w-12 h-12 rounded-xl bg-purple-500/10 border border-purple-500/30 flex items-center justify-center text-purple-400 text-xl";
-                    card.className = "bg-gradient-to-br from-slate-900 to-slate-950 border border-purple-500/20 rounded-2xl p-6 shadow-2xl transition-all duration-300";
-                } else { // Amber Theme
-                    badge.className = "text-xs font-bold text-amber-500 uppercase tracking-widest";
-                    iconContainer.className = "w-12 h-12 rounded-xl bg-amber-500/10 border border-amber-500/30 flex items-center justify-center text-amber-400 text-xl";
-                    card.className = "bg-gradient-to-br from-slate-900 to-slate-950 border border-amber-500/20 rounded-2xl p-6 shadow-2xl transition-all duration-300";
-                }
-
-                // Render detail bullet points dynamically
-                list.innerHTML = "";
-                node.points.forEach(pt => {
-                    const checkColor = node.id === 4 ? 'text-emerald-500' : (node.id === 1 ? 'text-blue-500' : (node.id === 2 ? 'text-purple-500' : 'text-amber-500'));
-                    list.innerHTML += `<li class="flex items-center gap-2"><i class="fa-solid fa-circle-check ${checkColor}"></i> ${pt}</li>`;
-                });
-
-                card.classList.remove('opacity-0', 'scale-[0.98]');
-            }, 150);
-        }
-
-        // Mouse motion triggers
-        canvas.addEventListener('mousemove', (e) => {
-            const mousePos = getMousePos(e);
-            const hitNode = checkNodeCollision(mousePos);
-            hoverNodeId = hitNode ? hitNode.id : null;
-        });
-
-        canvas.addEventListener('click', (e) => {
-            const mousePos = getMousePos(e);
-            const hitNode = checkNodeCollision(mousePos);
-            if (hitNode) {
-                activeNodeId = hitNode.id;
-                updateDetailsPanel(hitNode);
+                canvas.width = rect.width * dpr;
+                canvas.height = rect.height * dpr;
+                ctx.scale(dpr, dpr);
             }
-        });
 
-        // Touch gesture compatibility
-        canvas.addEventListener('touchstart', (e) => {
-            if (e.touches.length > 0) {
-                const touch = e.touches[0];
-                const mousePos = {
-                    x: touch.clientX - canvas.getBoundingClientRect().left,
-                    y: touch.clientY - canvas.getBoundingClientRect().top
-                };
-                const hitNode = checkNodeCollision(mousePos);
-                if (hitNode) {
-                    activeNodeId = hitNode.id;
-                    updateDetailsPanel(hitNode);
-                }
-            }
-        });
-
-        // Bootstrapping the view
-        window.addEventListener('resize', resizeCanvas);
-        
-        window.onload = function() {
+            window.addEventListener("resize", resizeCanvas);
             resizeCanvas();
-            initParticles();
-            // Default initial load configuration
-            updateDetailsPanel(nodes[0]);
-            // Start continuous render cycle
-            drawRoadmap();
-        };
+
+            // TRACKING: Mouse and Interactive Coordinate States
+            let mouseX = 0;
+            let mouseY = 0;
+            let hoveredNodeId = null;
+
+            // Convert raw event mouse clicks/moves to responsive percentages inside coordinates
+            function getCanvasRelativeCoords(e) {
+                const rect = canvas.getBoundingClientRect();
+                const x = e.clientX - rect.left;
+                const y = e.clientY - rect.top;
+                return { x, y };
+            }
+
+            // Capture hovering triggers on roadmap milestones
+            canvas.addEventListener("mousemove", (e) => {
+                const { x, y } = getCanvasRelativeCoords(e);
+                mouseX = x;
+                mouseY = y;
+
+                const rect = canvas.getBoundingClientRect();
+                let foundHover = null;
+
+                roadmapData.forEach(node => {
+                    const actualX = node.canvasPos.xPercent * rect.width;
+                    const actualY = node.canvasPos.yPercent * rect.height;
+                    const distance = Math.hypot(x - actualX, y - actualY);
+                    
+                    if (distance <= 32) { // Detection radius
+                        foundHover = node.id;
+                    }
+                });
+
+                hoveredNodeId = foundHover;
+                canvas.style.cursor = foundHover ? "pointer" : "default";
+            });
+
+            // Capture node selections
+            canvas.addEventListener("mousedown", (e) => {
+                const { x, y } = getCanvasRelativeCoords(e);
+                const rect = canvas.getBoundingClientRect();
+
+                roadmapData.forEach(node => {
+                    const actualX = node.canvasPos.xPercent * rect.width;
+                    const actualY = node.canvasPos.yPercent * rect.height;
+                    const distance = Math.hypot(x - actualX, y - actualY);
+                    
+                    if (distance <= 32) {
+                        selectedNodeId = node.id;
+                        updateDetailsPanel(selectedNodeId);
+                    }
+                });
+            });
+
+            // Visual properties for dynamic graphics
+            let pulseTime = 0;
+            let pathDashOffset = 0;
+
+            // Main canvas render frame update
+            function drawCanvasRoadmap() {
+                const rect = canvas.getBoundingClientRect();
+                const width = rect.width;
+                const height = rect.height;
+
+                // Adjust dynamically inside animation frame loops if parent dimensions mismatch
+                if (canvas.width !== width * (window.devicePixelRatio || 1) || canvas.height !== height * (window.devicePixelRatio || 1)) {
+                    resizeCanvas();
+                }
+
+                // Clear layout canvas transparently
+                ctx.clearRect(0, 0, width, height);
+
+                // Increments
+                pulseTime += 0.04;
+                pathDashOffset -= 0.6; // Moves active dots forward
+
+                // Coordinates mapper
+                const nodes = roadmapData.map(node => ({
+                    id: node.id,
+                    x: node.canvasPos.xPercent * width,
+                    y: node.canvasPos.yPercent * height,
+                    color: node.nodeColor,
+                    phase: node.phase,
+                    title: node.title
+                }));
+
+                // DRAW ROAD CONNECTIONS (Curved Bezier Paths)
+                ctx.beginPath();
+                ctx.moveTo(nodes[0].x, nodes[0].y);
+                
+                // Drawing continuous smooth curve
+                for (let i = 0; i < nodes.length - 1; i++) {
+                    const p0 = nodes[i];
+                    const p1 = nodes[i + 1];
+                    const cpX1 = p0.x + (p1.x - p0.x) * 0.5;
+                    const cpY1 = p0.y;
+                    const cpX2 = p0.x + (p1.x - p0.x) * 0.5;
+                    const cpY2 = p1.y;
+                    ctx.bezierCurveTo(cpX1, cpY1, cpX2, cpY2, p1.x, p1.y);
+                }
+
+                // Render dynamic flow tracks underlying connection
+                ctx.strokeStyle = "rgba(226, 232, 240, 0.9)";
+                ctx.lineWidth = 10;
+                ctx.lineCap = "round";
+                ctx.stroke();
+
+                // Double layer inner core color line
+                ctx.strokeStyle = "#e2e8f0";
+                ctx.lineWidth = 4;
+                ctx.stroke();
+
+                // FLOWING ANIMATED DOTS (Glow effect running across roadmap)
+                ctx.save();
+                ctx.beginPath();
+                ctx.moveTo(nodes[0].x, nodes[0].y);
+                for (let i = 0; i < nodes.length - 1; i++) {
+                    const p0 = nodes[i];
+                    const p1 = nodes[i + 1];
+                    const cpX1 = p0.x + (p1.x - p0.x) * 0.5;
+                    const cpY1 = p0.y;
+                    const cpX2 = p0.x + (p1.x - p0.x) * 0.5;
+                    const cpY2 = p1.y;
+                    ctx.bezierCurveTo(cpX1, cpY1, cpX2, cpY2, p1.x, p1.y);
+                }
+                ctx.strokeStyle = "#a5f3fc"; // Sky light glow color
+                ctx.lineWidth = 3;
+                ctx.setLineDash([8, 22]);
+                ctx.lineDashOffset = pathDashOffset;
+                ctx.stroke();
+                ctx.restore();
+
+                // DRAW INDIVIDUAL MILESTONE NODES
+                nodes.forEach(node => {
+                    const isSelected = selectedNodeId === node.id;
+                    const isHovered = hoveredNodeId === node.id;
+                    
+                    // Base size setup
+                    let outerRadius = 24;
+                    if (isHovered) outerRadius = 27;
+                    if (isSelected) outerRadius = 29;
+
+                    const pulseGlow = Math.sin(pulseTime) * 4 + 6;
+
+                    // 1. Render Outer Pulsing Halo ring for selected node
+                    if (isSelected) {
+                        ctx.beginPath();
+                        ctx.arc(node.x, node.y, outerRadius + pulseGlow, 0, Math.PI * 2);
+                        ctx.fillStyle = `rgba(14, 165, 233, 0.15)`; // Cyan translucent glow
+                        ctx.fill();
+                    }
+
+                    // 2. Render Node Border Shadow Frame
+                    ctx.beginPath();
+                    ctx.arc(node.x, node.y, outerRadius, 0, Math.PI * 2);
+                    ctx.fillStyle = "#ffffff";
+                    ctx.shadowColor = "rgba(15, 23, 42, 0.08)";
+                    ctx.shadowBlur = isHovered || isSelected ? 12 : 6;
+                    ctx.shadowOffsetY = 4;
+                    ctx.fill();
+                    ctx.shadowBlur = 0; // Reset canvas context shadow state
+                    ctx.shadowOffsetY = 0;
+
+                    // 3. Render Inner Core Circle Fill
+                    ctx.beginPath();
+                    ctx.arc(node.x, node.y, outerRadius - 4, 0, Math.PI * 2);
+                    ctx.fillStyle = node.color;
+                    ctx.fill();
+
+                    // 4. Draw Center Indicator (Mini-ring or Core dot)
+                    ctx.beginPath();
+                    ctx.arc(node.x, node.y, 6, 0, Math.PI * 2);
+                    ctx.fillStyle = "#ffffff";
+                    ctx.fill();
+
+                    // 5. Draw Dynamic text Labels (Title & Phase indicators)
+                    ctx.font = "bold 11px 'Plus Jakarta Sans', sans-serif";
+                    ctx.fillStyle = isSelected ? "#0284c7" : "#64748b";
+                    ctx.textAlign = "center";
+                    ctx.fillText(node.phase.toUpperCase(), node.x, node.y - outerRadius - 16);
+
+                    ctx.font = "bold 12px 'Plus Jakarta Sans', sans-serif";
+                    ctx.fillStyle = isSelected ? "#0f172a" : "#334155";
+                    ctx.fillText(node.title, node.x, node.y - outerRadius - 4);
+
+                    // Quick subtle checklist/tick icon render inside nodes if active/completed
+                    if (node.id < selectedNodeId) {
+                        ctx.beginPath();
+                        ctx.arc(node.x, node.y, outerRadius - 4, 0, Math.PI * 2);
+                        ctx.fillStyle = "#10b981"; // Clean green to show completion state
+                        ctx.fill();
+                        
+                        // Draw custom tiny white tick checkmark
+                        ctx.beginPath();
+                        ctx.strokeStyle = "#ffffff";
+                        ctx.lineWidth = 2.5;
+                        ctx.lineCap = "round";
+                        ctx.moveTo(node.x - 4, node.y);
+                        ctx.lineTo(node.x - 1, node.y + 3);
+                        ctx.lineTo(node.x + 5, node.y - 3);
+                        ctx.stroke();
+                    }
+                });
+
+                // Request next animation draw
+                animationFrameId = requestAnimationFrame(drawCanvasRoadmap);
+            }
+
+            // Start Canvas Roadmap Loop
+            drawCanvasRoadmap();
+        });
     </script>
 </body>
 </html>
